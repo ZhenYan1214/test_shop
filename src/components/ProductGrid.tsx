@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, ShoppingBag, Eye } from 'lucide-react';
+import { Heart, ShoppingBag } from 'lucide-react';
 import img1 from '../assets/1.jpg';
 import img3 from '../assets/3.jpg';
 import img6 from '../assets/6.jpg';

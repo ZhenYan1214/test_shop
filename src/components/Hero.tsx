@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import heroImg from '../assets/2.jpg';
 
 export default function Hero() {
   return (
@@ -11,7 +10,7 @@ export default function Hero() {
       <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-soft-lavender/30 rounded-full blur-[100px] pointer-events-none mix-blend-multiply" />
       
       {/* Decorative Text Texture */}
-      <div className="absolute top-20 left-10 text-9xl font-serif text-soft-pink/5 select-none pointer-events-none rotate-[-10deg]">
+      <div className="absolute top-20 left-10 text-9xl font-serif text-soft-pink/5 select-none pointer-events-none rotate-[-10deg] hidden lg:block">
         Kawaii
       </div>
 
@@ -26,10 +25,10 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-soft-pink/30 text-sm text-text-main/80 font-medium shadow-sm">
             <Sparkles size={14} className="text-soft-pink" />
-            <span className="tracking-wide">日系少女・精選古著</span>
+            <span className="tracking-wide font-serif">日系少女・精選古著</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-sans font-bold leading-[1.2] text-text-main tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.2] text-text-main tracking-tight">
             遇見你的<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-soft-pink to-dusty-rose relative inline-block">
               命定穿搭<span className="text-soft-pink text-6xl absolute -top-4 -right-8 animate-bounce">♡</span>
@@ -75,8 +74,11 @@ export default function Hero() {
                 className="relative z-20 rounded-[3rem] overflow-hidden shadow-2xl border-[6px] border-white aspect-[4/5] bg-white ring-4 ring-soft-pink/20"
             >
                 <img 
-                    src={heroImg} 
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop" 
                     alt="Cute Japanese Fashion" 
+                    onError={(e) => {
+                      e.currentTarget.src = "https://placehold.co/800x1000/ffccd5/ffffff?text=Second+Love";
+                    }}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
             </motion.div>
@@ -96,7 +98,7 @@ export default function Hero() {
                 className="absolute -bottom-8 -right-4 w-auto px-6 py-3 bg-white rounded-2xl shadow-xl flex items-center justify-center z-30 opacity-90 hidden md:flex border-2 border-soft-pink/20"
             >
                 <div className="text-center">
-                  <p className="font-bold text-lg text-text-main">100% 正品保證</p>
+                  <p className="font-bold text-lg text-text-main font-serif">100% 正品保證</p>
                   <p className="text-xs text-dusty-rose">日本直送・嚴選品質</p>
                 </div>
             </motion.div>
