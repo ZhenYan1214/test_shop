@@ -8,7 +8,7 @@ export default function Navbar() {
   // Menu items translate
   const menuItems = [
     { name: '首頁', href: '#' },
-    { name: '商店', href: '#' },
+    { name: '所有商品', href: '#' },
     { name: '本週新品', href: '#' },
     { name: '關於我們', href: '#' },
   ];
@@ -32,7 +32,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 whileHover={{ y: -2, color: '#ffccd5' }}
-                className="transition-colors relative group font-serif"
+                className="transition-colors relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-soft-pink transition-all group-hover:w-full"></span>
@@ -73,7 +73,7 @@ export default function Navbar() {
         >
           <div className="flex flex-col gap-4 text-center">
             {menuItems.map((item) => (
-              <a key={item.name} href={item.href} className="text-text-main font-bold py-3 hover:text-soft-pink hover:bg-soft-pink/5 rounded-xl transition-all no-underline text-lg font-serif">
+              <a key={item.name} href={item.href} className="text-text-main font-bold py-3 hover:text-soft-pink hover:bg-soft-pink/5 rounded-xl transition-all no-underline text-lg">
                 {item.name}
               </a>
             ))}
