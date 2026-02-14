@@ -9,8 +9,10 @@
   --color-soft-lavender: #e6e6fa;
   --color-text-main: #4a4a4a;
 
-  --font-serif: "Noto Serif JP", serif;
-  --font-sans: "Noto Sans JP", sans-serif;
+  /* Use a cute, rounded font for headings */
+  --font-serif: "Zen Maru Gothic", sans-serif; 
+  /* Use the same for body or a readable sans */
+  --font-sans: "Zen Maru Gothic", sans-serif;
 
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
